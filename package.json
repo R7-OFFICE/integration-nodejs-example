@@ -1,0 +1,39 @@
+{
+	"name": "integration-nodejs-example",
+	"description": "Node.js integration example",
+	"version": "0.0.0",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"start": "node src/index.js",
+		"dev": "nodemon src/index.js",
+		"fix": "eslint \"src/**/*.js\" --fix --ext .js"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"config": "^3.3.1",
+		"ejs": "~3.1.5",
+		"express": "^4.17.1",
+		"formidable": "^1.2.2",
+		"jsonwebtoken": "^8.5.1",
+		"jwa": "^2.0.0",
+		"log4js": "^6.3.0",
+		"mime": "^2.4.6",
+		"serve-favicon": "~2.5.0",
+		"sync-request": "^6.1.0",
+		"urllib": "^2.36.1"
+	},
+	"devDependencies": {
+		"eslint": "^7.9.0",
+		"eslint-plugin-import": "^2.22.0",
+		"nodemon": "^2.0.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/R7-OFFICE/integration-nodejs-example.git"
+	},
+	"bugs": {
+		"url": "https://github.com/R7-OFFICE/integration-nodejs-example/issues"
+	},
+	"homepage": "https://github.com/R7-OFFICE/integration-nodejs-example#readme"
+}
