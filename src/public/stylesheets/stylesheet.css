@@ -51,7 +51,8 @@ a, a:hover, a:visited {
 }
 header {
     height: 44px;
-    background: #3D4A6B;
+		background: #fff;
+		border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
     height: 80px;
     margin: 0 auto;
     min-width: 600px;
@@ -118,7 +119,7 @@ label .checkbox {
 }
 .create-sample {
     display: inline-block;
-    margin-left: 75px;
+    margin-left: 27px;
 }
 .button, .button:visited, .button:hover, .button:active {
     display: inline-block;

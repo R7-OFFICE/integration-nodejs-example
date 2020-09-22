@@ -1,42 +1,13 @@
 'use strict';
 
-/*
- *
- * (c) Copyright Ascensio System SIA 2020
- *
- * The MIT License (MIT)
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- *
-*/
-
+const configServer = require('config').get('server');
 const fileSystem = require('fs');
 const path = require('path');
 
-const cacheManager = require('./cacheManager');
 const documentService = require('./documentService');
 const fileUtility = require('./fileUtility');
-const guidManager = require('./guidManager');
 
-const configServer = require('config').get('server');
 const storageFolder = configServer.get('storageFolder');
-const os = require('os');
 
 const docManager = {};
 
@@ -128,23 +99,23 @@ docManager.createDemo = function (demoName, userid, username) {
 
 docManager.saveFileData = function (fileName, userid, username) {
 	const userAddress = docManager.curUserHostAddress();
-	const date_create = fileSystem.statSync(docManager.storagePath(fileName)).mtime;
-	const minutes = (date_create.getMinutes() < 10 ? '0' : '') + date_create.getMinutes().toString();
-	const month = (date_create.getMonth() < 10 ? '0' : '') + (+date_create.getMonth().toString() + 1);
-	const sec = (date_create.getSeconds() < 10 ? '0' : '') + date_create.getSeconds().toString();
-	const date_format = `${date_create.getFullYear()}-${month}-${date_create.getDate()} ${date_create.getHours()}:${minutes}:${sec}`;
+	const dateCreate = fileSystem.statSync(docManager.storagePath(fileName)).mtime;
+	const minutes = (dateCreate.getMinutes() < 10 ? '0' : '') + dateCreate.getMinutes().toString();
+	const month = (dateCreate.getMonth() < 10 ? '0' : '') + (+dateCreate.getMonth().toString() + 1);
+	const sec = (dateCreate.getSeconds() < 10 ? '0' : '') + dateCreate.getSeconds().toString();
+	const dateFormat = `${dateCreate.getFullYear()}-${month}-${dateCreate.getDate()} ${dateCreate.getHours()}:${minutes}:${sec}`;
 
-	const file_info = docManager.historyPath(fileName, userAddress, true);
-	this.createDirectory(file_info);
+	const fileInfo = docManager.historyPath(fileName, userAddress, true);
+	this.createDirectory(fileInfo);
 
-	fileSystem.writeFileSync(path.join(file_info, `${fileName}.txt`), `${date_format},${userid},${username}`);
+	fileSystem.writeFileSync(path.join(fileInfo, `${fileName}.txt`), `${dateFormat},${userid},${username}`);
 };
 
 docManager.getFileData = function (fileName, userAddress) {
 	const history = path.join(docManager.historyPath(fileName, userAddress, true), `${fileName}.txt`);
 
 	if (!this.existsSync(history)) {
-		return ['2017-01-01', 'uid-1', 'John Smith'];
+		return ['2017-01-01', 'uid-1', 'Кравченко Иван'];
 	}
 
 	return ((fileSystem.readFileSync(history)).toString())
@@ -388,10 +359,26 @@ docManager.getHistory = function (fileName, content, keyVersion, version) {
 	}
 
 	const userAddress = docManager.curUserHostAddress();
-	const username = content ? (oldVersion ? contentJson.username : contentJson.user.name) : (docManager.getFileData(fileName, userAddress))[2];
-	const userid = content ? (oldVersion ? contentJson.userid : contentJson.user.id) : (docManager.getFileData(fileName, userAddress))[1];
-	const created = content ? (oldVersion ? contentJson.date : contentJson.created) : (docManager.getFileData(fileName, userAddress))[0];
-	const res = (content && !oldVersion) ? content : { changes: content };
+	let username, userid, created, res;
+
+	if (content) {
+		if (oldVersion) {
+			username = contentJson.username;
+			userid = contentJson.userid;
+			created = contentJson.date;
+		} else {
+			username = contentJson.user.name;
+			userid = contentJson.user.id;
+			created = contentJson.created;
+			res = content;
+		}
+	} else {
+		username = docManager.getFileData(fileName, userAddress)[2];
+		userid = docManager.getFileData(fileName, userAddress)[1];
+		created = docManager.getFileData(fileName, userAddress)[0];
+		res = { changes: content };
+	}
+
 	res.key = keyVersion;
 	res.version = version;
 	res.created = created;

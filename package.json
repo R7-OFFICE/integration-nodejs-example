@@ -16,7 +16,6 @@
 		"express": "^4.17.1",
 		"formidable": "^1.2.2",
 		"jsonwebtoken": "^8.5.1",
-		"jwa": "^2.0.0",
 		"log4js": "^6.3.0",
 		"mime": "^2.4.6",
 		"serve-favicon": "~2.5.0",

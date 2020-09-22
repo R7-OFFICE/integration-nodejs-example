@@ -1,37 +1,10 @@
-﻿<!--*
- *
- * (c) Copyright Ascensio System SIA 2020
- *
- * The MIT License (MIT)
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- *
-*-->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+﻿<!DOCTYPE html>
 <html>
 	<head runat="server">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width" />
-		<title>ONLYOFFICE Document Editors</title>
+		<title>Р7 Офис Document Editors</title>
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<link
 			rel="stylesheet"
@@ -44,104 +17,96 @@
 	<body>
 		<header>
 			<a href="">
-				<img src="images/logo.png" alt="ONLYOFFICE" />
+				<img src="images/logo.png" alt="Р7 Офис" />
 			</a>
 		</header>
 		<div class="main-panel">
-			<span class="portal-name">ONLYOFFICE Document Editors – Welcome!</span>
+			<span class="portal-name">Вас приветствуют: Р7 Офис Редакторы Документов!</span>
 			<br />
 			<br />
 			<span class="portal-descr"
-				>Get started with a demo-sample of ONLYOFFICE Document Editors, the first html5-based editors. You may upload your own documents for
-				testing using the "Upload file" button and selecting the necessary files on your PC.</span
+				>Начните с демонстрационного примера Редакторов Документов Р7 Офис, первых редакторов на основе HTML5. Вы можете загрузить свои
+				собственные документы для тестирование с помощью кнопки «Загрузить файл» и выбора необходимых файлов на ПК.</span
 			>
 			<table class="user-block-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td valign="middle" width="30%">
-						<span class="select-user">Username:</span>
+						<span class="select-user">Имя пользователя:</span>
 						<select class="select-user" id="user">
-							<option value="uid-1">John Smith</option>
-							<option value="uid-2">Mark Pottato</option>
-							<option value="uid-3">Hamish Mitchell</option>
+							<option value="uid-1">Кравченко Иван</option>
+							<option value="uid-2">Миронов Валерий</option>
+							<option value="uid-3">Мишин Николай</option>
 						</select>
 					</td>
 					<td valign="middle" width="70%">
-						Select user name before opening the document; you can open the same document using different users in different Web browser
-						sessions, so you can check out multi-user editing functions.
+						Выберите имя пользователя перед открытием документа; вы можете открыть один и тот же документ, используя разных пользователей в
+						разных браузерах сессий, так что вы можете проверить функции многопользовательского редактирования.
 					</td>
 				</tr>
 				<tr>
 					<td valign="middle" width="30%">
 						<select class="select-user" id="language">
-							<option value="en">English</option>
-							<option value="bg">Bulgarian</option>
-							<option value="zh">Chinese</option>
-							<option value="cs">Czech</option>
-							<option value="nl">Dutch</option>
-							<option value="fr">French</option>
-							<option value="de">German</option>
-							<option value="hu">Hungarian</option>
-							<option value="it">Italian</option>
-							<option value="ja">Japanese</option>
-							<option value="ko">Korean</option>
-							<option value="lv">Latvian</option>
-							<option value="pl">Polish</option>
-							<option value="pt">Portuguese</option>
-							<option value="ru">Russian</option>
-							<option value="sk">Slovak</option>
-							<option value="sl">Slovenian</option>
-							<option value="es">Spanish</option>
-							<option value="tr">Turkish</option>
-							<option value="uk">Ukrainian</option>
-							<option value="vi">Vietnamese</option>
+							<option value="ru">Русский</option>
+							<option value="en">Английский</option>
+							<option value="bg">Болгарский</option>
+							<option value="zh">Китайский</option>
+							<option value="cs">Чешский</option>
+							<option value="nl">Нидерландский</option>
+							<option value="fr">Французский</option>
+							<option value="de">Немецкий</option>
+							<option value="hu">Венгерский</option>
+							<option value="it">Итальянский</option>
+							<option value="ja">Японский</option>
+							<option value="ko">Корейский</option>
+							<option value="lv">Латышский</option>
+							<option value="pl">Польский</option>
+							<option value="pt">Португальский</option>
+							<option value="sk">Словацкий</option>
+							<option value="sl">Словенский</option>
+							<option value="es">Испанский</option>
+							<option value="tr">Турецкий</option>
+							<option value="uk">Украинский</option>
+							<option value="vi">Вьетнамский</option>
 						</select>
 					</td>
-					<td valign="middle" width="70%">Choose the language for ONLYOFFICE editors interface.</td>
+					<td valign="middle" width="70%">Выберите язык интерфейса для редактора Р7 Офис.</td>
 				</tr>
 			</table>
 			<br />
 			<br />
 
 			<div class="help-block">
-				<span>Upload your file or create new file</span>
+				<span>Загрузите свой файл и создайте новый</span>
 				<br />
 				<br />
 				<div class="clearFix">
 					<div class="upload-panel clearFix">
 						<a class="file-upload"
-							>Upload
+							>Загрузить
 							<br />
-							File
+							Файл
 							<input type="file" id="fileupload" name="uploadedFile" data-url="upload?<%= params %>" />
 						</a>
 					</div>
 					<div class="create-panel clearFix">
 						<ul class="try-editor-list clearFix">
 							<li>
-								<a class="try-editor document reload-page" target="_blank" href="editor?fileExt=docx<%= params %>"
-									>Create
-									<br />
-									Document</a
-								>
+								<a class="try-editor document reload-page" target="_blank" href="editor?fileExt=docx<%= params %>">Создать<br />Документ</a>
 							</li>
 							<li>
 								<a class="try-editor spreadsheet reload-page" target="_blank" href="editor?fileExt=xlsx<%= params %>"
-									>Create
-									<br />
-									Spreadsheet</a
+									>Создать<br />Таблицу</a
 								>
 							</li>
 							<li>
 								<a class="try-editor presentation reload-page" target="_blank" href="editor?fileExt=pptx<%= params %>"
-									>Create
-									<br />
-									Presentation</a
+									>Создать<br />Презентацию</a
 								>
 							</li>
 						</ul>
-						<label class="create-sample">
-							<input type="checkbox" id="createSample" class="checkbox" />Create a file filled with sample content
-						</label>
+						<label class="create-sample"
+							><input type="checkbox" id="createSample" class="checkbox" />Создайте файл, заполненный образцом содержимого</label
+						>
 					</div>
 				</div>
 			</div>
@@ -151,16 +116,16 @@
 			<% if (storedFiles.length > 0) { %>
 			<br />
 			<div class="help-block">
-				<span>Your documents</span>
+				<span>Ваши документы</span>
 				<br />
 				<br />
 				<div class="stored-list">
 					<table cellspacing="0" cellpadding="0" width="100%">
 						<thead>
 							<tr class="tableHeader">
-								<td class="tableHeaderCell tableHeaderCellFileName">Filename</td>
-								<td colspan="6" class="tableHeaderCell contentCells-shift">Editors</td>
-								<td colspan="3" class="tableHeaderCell">Viewers</td>
+								<td class="tableHeaderCell tableHeaderCellFileName">Имя файла</td>
+								<td colspan="6" class="tableHeaderCell contentCells-shift">Редакторы</td>
+								<td colspan="3" class="tableHeaderCell">Способы просмотра</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -175,10 +140,10 @@
 										<span title="<%= storedFiles[i].name %> [<%= storedFiles[i].version %>]"><%= storedFiles[i].name %></span></a
 									>
 									<a href="download?fileName=<%= encodeURIComponent(storedFiles[i].name) %>">
-										<img class="icon-download" src="images/download-24.png" alt="Download" title="Download"
+										<img class="icon-download" src="images/download-24.png" alt="Скачать" title="Скачать"
 									/></a>
 									<a class="delete-file" data="<%= encodeURIComponent(storedFiles[i].name) %>">
-										<img class="icon-delete" src="images/delete-24.png" alt="Delete" title="Delete"
+										<img class="icon-delete" src="images/delete-24.png" alt="Удалить" title="Удалить"
 									/></a>
 								</td>
 								<% if (storedFiles[i].canEdit) { %>
@@ -186,13 +151,16 @@
 									<a href="editor?type=desktop&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>" target="_blank">
 										<img
 											src="images/desktop-24.png"
-											alt="Open in editor for full size screens"
-											title="Open in editor for full size screens"
+											alt="Открыть в редакторе для полноразмерных экранов"
+											title="Открыть в редакторе для полноразмерных экранов"
 									/></a>
 								</td>
 								<td class="contentCells contentCells-icon">
 									<a href="editor?type=mobile&mode=edit&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>" target="_blank">
-										<img src="images/mobile-24.png" alt="Open in editor for mobile devices" title="Open in editor for mobile devices"
+										<img
+											src="images/mobile-24.png"
+											alt="Открыть в редакторе для мобильных устройств"
+											title="Открыть в редакторе для мобильных устройств"
 									/></a>
 								</td>
 								<td class="contentCells contentCells-icon">
@@ -201,7 +169,7 @@
 										href="editor?type=desktop&mode=review&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>"
 										target="_blank"
 									>
-										<img src="images/review-24.png" alt="Open in editor for review" title="Open in editor for review"
+										<img src="images/review-24.png" alt="Открыть в редакторе для просмотра" title="Открыть в редакторе для просмотра"
 									/></a>
 									<% } else if (storedFiles[i].documentType == "spreadsheet") { %>
 									<a
@@ -210,8 +178,8 @@
 									>
 										<img
 											src="images/filter-24.png"
-											alt="Open in editor without access to change the filter"
-											title="Open in editor without access to change the filter"
+											alt="Открыть в редакторе без доступа для изменения фильтра"
+											title="Открыть в редакторе без доступа для изменения фильтра"
 									/></a>
 									<% } %>
 								</td>
@@ -220,7 +188,10 @@
 										href="editor?type=desktop&mode=comment&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>"
 										target="_blank"
 									>
-										<img src="images/comment-24.png" alt="Open in editor for comment" title="Open in editor for comment"
+										<img
+											src="images/comment-24.png"
+											alt="Открыть в редакторе для комментариев"
+											title="Открыть в редакторе для комментариев"
 									/></a>
 								</td>
 								<td class="contentCells contentCells-icon">
@@ -231,8 +202,8 @@
 									>
 										<img
 											src="images/fill-forms-24.png"
-											alt="Open in editor for filling in forms"
-											title="Open in editor for filling in forms"
+											alt="Открыть в редакторе для заполнения форм"
+											title="Открыть в редакторе для заполнения форм"
 									/></a>
 									<% } %>
 								</td>
@@ -244,8 +215,8 @@
 									>
 										<img
 											src="images/block-content-24.png"
-											alt="Open in editor without content control modification"
-											title="Open in editor without content control modification"
+											alt="Открыть в редакторе без изменения элемента управления содержимым"
+											title="Открыть в редакторе без изменения элемента управления содержимым"
 									/></a>
 									<% } %>
 								</td>
@@ -256,13 +227,16 @@
 									<a href="editor?type=desktop&mode=view&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>" target="_blank">
 										<img
 											src="images/desktop-24.png"
-											alt="Open in viewer for full size screens"
-											title="Open in viewer for full size screens"
+											alt="Открыть в программе просмотра для полноразмерных экранов"
+											title="Открыть в программе просмотра для полноразмерных экранов"
 									/></a>
 								</td>
 								<td class="contentCells contentCells-icon">
 									<a href="editor?type=mobile&mode=view&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>" target="_blank">
-										<img src="images/mobile-24.png" alt="Open in viewer for mobile devices" title="Open in viewer for mobile devices"
+										<img
+											src="images/mobile-24.png"
+											alt="Открыть в программе просмотра для мобильных устройств"
+											title="Открыть в программе просмотра для мобильных устройств"
 									/></a>
 								</td>
 								<td class="contentCells contentCells-icon">
@@ -270,7 +244,7 @@
 										href="editor?type=embedded&mode=embedded&fileName=<%= encodeURIComponent(storedFiles[i].name) + params %>"
 										target="_blank"
 									>
-										<img src="images/embeded-24.png" alt="Open in embedded mode" title="Open in embedded mode"
+										<img src="images/embeded-24.png" alt="Открыть во встроенном режиме" title="Открыть во встроенном режиме"
 									/></a>
 								</td>
 							</tr>
@@ -283,63 +257,66 @@
 			<br />
 			<br />
 			<br />
-			<div class="help-block">
-				<span>Want to learn the magic?</span>
+			<div class="help-block" hidden>
+				<span>Хотите узнать волшебство?</span>
 				<br />
-				Explore ONLYOFFICE Document Editors <a href="http://api.onlyoffice.com/editors/howitworks" target="_blank">API Documentation.</a>
+				Изучите <a href="http://api.onlyoffice.com/editors/howitworks" target="_blank">API документацию</a> редакторов документов Р7 Офис.
 			</div>
 			<br />
 			<br />
 			<br />
 			<div class="help-block">
-				<span>Any questions?</span>
+				<span>Остались вопросы?</span>
 				<br />
-				Please, <a href="mailto:sales@onlyoffice.com">submit your request here</a>.
+				Пожалуйста, <a href="mailto:sales@onlyoffice.com">напишите нам</a>.
 			</div>
 		</div>
 
 		<div id="mainProgress">
 			<div id="uploadSteps">
-				<span id="step1" class="step">1. Loading the file</span>
+				<span id="step1" class="step">1. Загрузка файла</span>
 				<span class="step-descr"
-					>The file loading process will take some time depending on the file size, presence or absence of additional elements in it
-					(macros, etc.) and the connection speed.</span
+					>Процесс загрузки файла займет некоторое время в зависимости от размера файла, наличия или отсутствия в нем дополнительных
+					элементов. (макросы и т. д.) и скорость соединения.</span
 				>
 				<br />
-				<span id="step2" class="step">2. File conversion</span>
-				<span class="step-descr">The file is being converted into Office Open XML format for the document faster viewing and editing.</span>
-				<br />
-				<span id="step3" class="step">3. Loading editor scripts</span>
+				<span id="step2" class="step">2. Преобразование файлов</span>
 				<span class="step-descr"
-					>The scripts for the editor are loaded only once and are will be cached on your computer in future. It might take some time
-					depending on the connection speed.</span
+					>Файл конвертируется в формат Office Open XML для более быстрого просмотра и редактирования документа.</span
+				>
+				<br />
+				<span id="step3" class="step">3. Загрузка сценариев редактора</span>
+				<span class="step-descr"
+					>Сценарии для редактора загружаются только один раз и в дальнейшем будут кэшироваться на вашем компьютере. Это может занять
+					некоторое время в зависимости от скорости соединения.</span
 				>
 				<input type="hidden" name="hiddenFileName" id="hiddenFileName" />
 				<br />
 				<br />
 				<span class="progress-descr"
-					>Please note, that the speed of all operations greatly depends on the server and the client locations. In case they differ or are
-					located in differernt countries/continents, there might be lack of speed and greater wait time. The best results are achieved when
-					the server and client computers are located in one and the same place (city).</span
+					>Обратите внимание, что скорость всех операций во многом зависит от расположения сервера и клиента. Если они отличаются или
+					расположены в разных странах / на разных континентах, может быть нехватка скорости и большее время ожидания. Наилучшие результаты
+					достигаются, когда серверный и клиентский компьютеры находятся в одном месте (городе).</span
 				>
 				<br />
 				<br />
 				<div class="error-message">
 					<span></span>
 					<br />
-					Please select another file and try again. If you have questions please <a href="mailto:sales@onlyoffice.com">contact us.</a>
+					Пожалуйста, выберите другой файл и попробуйте еще раз. Если есть вопросы, пожалуйста
+					<a href="mailto:sales@onlyoffice.com">свяжитесь с нами.</a>
 				</div>
 			</div>
 			<br />
-			<div id="beginEmbedded" class="button disable">Embedded view</div>
-			<div id="beginView" class="button disable">View</div>
-			<div id="beginEdit" class="button disable">Edit</div>
-			<div id="cancelEdit" class="button gray">Cancel</div>
+			<div id="beginEmbedded" class="button disable">Встроенный вид</div>
+			<div id="beginView" class="button disable">Посмотреть</div>
+			<div id="beginEdit" class="button disable">Редактировать</div>
+			<div id="cancelEdit" class="button gray">Отмена</div>
 		</div>
 
 		<span id="loadScripts" data-docs="<%= preloaderUrl %>"></span>
 
-		<footer>&copy; Ascensio Systems SIA 2020. All rights reserved.</footer>
+		<footer>© 2020 АО «Новые коммуникационные технологии»</footer>
 
 		<script type="text/javascript" src="javascripts/jquery-1.8.2.js"></script>
 		<script type="text/javascript" src="javascripts/jquery-ui.js"></script>
