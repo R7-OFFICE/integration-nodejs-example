@@ -45,7 +45,7 @@ docManager.getLang = function () {
 	if (docManager.req.query.lang) {
 		return docManager.req.query.lang;
 	} else {
-		return 'en';
+		return 'ru';
 	}
 };
 
